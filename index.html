@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siri Sonuththara Maha Viharaya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;700&family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --maroon: #800000;
+            --gold: #FFD700;
+            --cream: #FFFDD0;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--cream);
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .sinhala {
+            font-family: 'Noto Sans Sinhala', sans-serif !important;
+        }
+        .bg-maroon { background-color: var(--maroon); }
+        .text-gold { color: var(--gold); }
+        .bg-cream { background-color: var(--cream); }
+        #hero {
+            transition: opacity 1s ease-in-out; /* Smooth fade transition */
+            opacity: 1; /* Default opacity */
+        }
+    </style>
+</head>
+<body class="bg-cream text-gray-700">
+
+<!-- Header -->
+<header class="fixed w-full z-10 bg-maroon text-white">
+    <div class="flex justify-between items-center py-4 px-6">
+        <div class="language-switcher">
+            <button onclick="changeLanguage('en')" class="px-2 py-1 rounded hover:bg-white hover:text-maroon">English</button>
+            <button onclick="changeLanguage('si')" class="px-2 py-1 rounded hover:bg-white hover:text-maroon">සිංහල</button>
+        </div>
+        <nav class="hidden md:flex space-x-4">
+            <a href="#about" class="hover:text-gold" data-en="About" data-si="අප ගැන">About</a>
+            <a href="#teachings" class="hover:text-gold" data-en="Teachings" data-si="ආචාර ධර්ම">Teachings</a>
+            <a href="#events" class="hover:text-gold" data-en="Events" data-si="කාර්යයන්">Events</a>
+            <a href="#visit" class="hover:text-gold" data-en="Visit" data-si="ඇවිත්">Visit</a>
+            <a href="#contact" class="hover:text-gold" data-en="Contact" data-si="සම්බන්ධ වන්න">Contact</a>
+        </nav>
+        <button class="md:hidden mobile-menu-btn p-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </div>
+    <div class="mobile-menu hidden md:hidden bg-maroon text-white">
+        <a href="#about" class="block py-2 px-4 hover:bg-gold" data-en="About" data-si="අප ගැන">About</a>
+        <a href="#teachings" class="block py-2 px-4 hover:bg-gold" data-en="Teachings" data-si="ආචාර ධර්ම">Teachings</a>
+        <a href="#events" class="block py-2 px-4 hover:bg-gold" data-en="Events" data-si="කාර්යයන්">Events</a>
+        <a href="#visit" class="block py-2 px-4 hover:bg-gold" data-en="Visit" data-si="ඇවිත්">Visit</a>
+        <a href="#contact" class="block py-2 px-4 hover:bg-gold" data-en="Contact" data-si="සම්බන්ධ වන්න">Contact</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section id="hero" class="h-screen flex items-center justify-center bg-cover bg-center">
+    <div class="bg-black bg-opacity-50 p-8 rounded-lg text-center">
+        <h1 class="text-5xl text-white mb-4" data-en="Welcome to Siri Sonuththara Maha Viharaya" data-si="සිරි සෝනුත්තර මහා විහාරයට සාදරයෙන් පිළිගනිමු">Welcome to Siri Sonuththara Maha Viharaya</h1>
+        <p class="text-xl text-white" data-en="A Sanctuary of Peace and Dharma" data-si="බුද්ධ ධර්මයේ සන්තිධානය">A Sanctuary of Peace and Dharma</p>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center" data-en="About Us" data-si="අප ගැන">About Us</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <p class="text-gray-600 leading-relaxed" data-en="Established in 1985, Siri Sonuththara Maha Viharaya serves as a center for Theravada Buddhist practice in Boralesgamuwa. Our mission is to promote mindfulness, compassion, and wisdom in modern life." data-si="1985 දී ස්ථාපිත කරන ලද සිරි සෝනුත්තර මහා විහාරය, බොරලේස්ගමුවේ ථේරවාද බුදුදහම පිළිබඳ කේන්ද්‍රස්ථානයක් ලෙස සේවය කරයි. අපගේ මෙහෙවර වන්නේ නූතන ජීවිතයේ සිහිය, කරුණාව සහ ප්‍රඥාව ප්‍රවර්ධනය කිරීමයි.">
+                    Established in 1985, Siri Sonuththara Maha Viharaya serves as a center for Theravada Buddhist practice in Boralesgamuwa. Our mission is to promote mindfulness, compassion, and wisdom in modern life.
+                </p>
+            </div>
+            <div>
+                <img src="images/temple-interior.jpg" alt="Temple interior" class="rounded-lg shadow-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Monks Section -->
+<section id="monks" class="py-20 bg-cream">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center" data-en="Our Monastic Leadership" data-si="අපගේ භික්ෂු නායකත්වය">Our Monastic Leadership</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow">
+                <img src="images/chief-monk.jpg" alt="Chief Monk" class="w-32 h-32 rounded-full mx-auto mb-4">
+                <h3 class="font-bold text-xl text-center" data-en="Ven. Dhammaloka Thero" data-si="පූජ්‍ය ධම්මලෝක ථෙර">Ven. Dhammaloka Thero</h3>
+                <p class="text-gray-600 text-center" data-en="Chief Monk" data-si="ප්‍රධාන සංඝනායක">Chief Monk</p>
+                <p class="text-gray-600 mt-2" data-en="With over 30 years of service, Ven. Dhammaloka Thero guides the temple with wisdom and compassion." data-si="වසර 30කට වැඩි සේවාවක් සමඟ, පූජ්‍ය ධම්මලෝක ථෙර විහාරය ප්‍රඥාවෙන් හා කරුණාවෙන් මෙහෙයවයි.">With over 30 years of service, Ven. Dhammaloka Thero guides the temple with wisdom and compassion.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow">
+                <img src="images/monk-in-charge.jpg" alt="Monk in Charge" class="w-32 h-32 rounded-full mx-auto mb-4">
+                <h3 class="font-bold text-xl text-center" data-en="Ven. Sumedha Thero" data-si="පූජ්‍ය සුමේධ ථෙර">Ven. Sumedha Thero</h3>
+                <p class="text-gray-600 text-center" data-en="Monk in Charge" data-si="භාරකාර භික්ෂු">Monk in Charge</p>
+                <p class="text-gray-600 mt-2" data-en="Overseeing daily operations and community outreach since 2015." data-si="2015 සිට දෛනික කටයුතු සහ ප්‍රජා සම්බන්ධතා අධීක්ෂණය කරයි.">Overseeing daily operations and community outreach since 2015.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Teachings Section -->
+<section id="teachings" class="py-20 bg-cream">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center" data-en="Dharma Teachings" data-si="බුද්ධ ආචාර ධර්ම">Dharma Teachings</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                <h3 class="font-bold mb-2" data-en="Daily Pujas" data-si="දිනමන් පූජා">Daily Pujas</h3>
+                <p class="text-gray-600" data-en="Morning and evening chanting sessions open to all devotees" data-si="සියලුම භක්තිකයන් සඳහා විවෘත පූර්වාහ්ණ සහ සායන්ත්රා ගායනා සැසි">
+                    Morning and evening chanting sessions open to all devotees
+                </p>
+            </div>
+            <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                <h3 class="font-bold mb-2" data-en="Meditation" data-si="භාවනා">Meditation</h3>
+                <p class="text-gray-600" data-en="Guided sessions every Sunday and Wednesday evenings" data-si="සෑම ඉරිදා සහ බදාදා සවස් වරුවේ මාර්ගෝපදේශ සැසි">
+                    Guided sessions every Sunday and Wednesday evenings
+                </p>
+            </div>
+            <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                <h3 class="font-bold mb-2" data-en="Dharma Talks" data-si="ධර්ම දේශනා">Dharma Talks</h3>
+                <p class="text-gray-600" data-en="Weekly discourses on Buddhist philosophy and modern life" data-si="බෞද්ධ දර්ශනය සහ නූතන ජීවිතය පිළිබඳ සාප්තාහික දේශන">
+                    Weekly discourses on Buddhist philosophy and modern life
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Events Section -->
+<section id="events" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center" data-en="Upcoming Events" data-si="අනාගත කාර්යයන්">Upcoming Events</h2>
+        <div class="space-y-8">
+            <div class="bg-cream p-6 rounded-lg shadow">
+                <div class="flex items-center mb-4">
+                    <div class="bg-maroon text-white p-2 rounded-lg mr-4">
+                        <p class="text-lg font-bold">22</p>
+                        <p class="text-sm" data-en="May" data-si="මැයි">May</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-xl" data-en="Vesak Festival" data-si="වෙසක් උත්සවය">Vesak Festival</h3>
+                        <p class="text-gray-600" data-en="May 22, 2025 | 6:00 PM" data-si="2025 මැයි 22 | 6:00 ප.ව.">May 22, 2025 | 6:00 PM</p>
+                    </div>
+                </div>
+                <p class="text-gray-700" data-en="Celebrate Buddha's birth, enlightenment, and passing with lantern lighting and Dharma talks" data-si="ලන්තෑරු ආලෝකමත් කිරීම සහ ධර්ම දේශන සමඟ බුදුරජාණන්වහන්සේගේ උපත, බුද්ධත්වය සහ පරිනිර්වාණය සමරන්න">
+                    Celebrate Buddha's birth, enlightenment, and passing with lantern lighting and Dharma talks
+                </p>
+            </div>
+            <div class="bg-cream p-6 rounded-lg shadow">
+                <div class="flex items-center mb-4">
+                    <div class="bg-maroon text-white p-2 rounded-lg mr-4">
+                        <p class="text-lg font-bold">15</p>
+                        <p class="text-sm" data-en="Jun" data-si="ජූනි">Jun</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-xl" data-en="Meditation Retreat" data-si="භාවනා ශිබිරය">Meditation Retreat</h3>
+                        <p class="text-gray-600" data-en="June 15-17, 2025" data-si="2025 ජූනි 15-17">June 15-17, 2025</p>
+                    </div>
+                </div>
+                <p class="text-gray-700" data-en="3-day silent retreat focusing on Vipassana meditation techniques" data-si="විපස්සනා භාවනා ක්‍රම මත යොමු වූ දින 3 නිහඬ ශිබිරය">
+                    3-day silent retreat focusing on Vipassana meditation techniques
+                </p>
+            </div>
+            <div class="bg-cream p-6 rounded-lg shadow">
+                <div class="flex items-center mb-4">
+                    <div class="bg-maroon text-white p-2 rounded-lg mr-4">
+                        <p class="text-lg font-bold">10</p>
+                        <p class="text-sm" data-en="Dec" data-si="දෙසැ">Dec</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-xl" data-en="Sangamitta Day 2024" data-si="සංගමිත්තා දිනය 2024">Sangamitta Day 2024</h3>
+                        <p class="text-gray-600" data-en="December 10, 2024 | 5:00 PM" data-si="2024 දෙසැම්බර් 10 | 5:00 ප.ව.">December 10, 2024 | 5:00 PM</p>
+                    </div>
+                </div>
+                <p class="text-gray-700" data-en="Commemoration of Sangamitta Theri’s arrival with chanting and almsgiving." data-si="සංගමිත්තා ථෙරණියගේ පැමිණීම සිහිකිරීම සඳහා ගායනා සහ දන්සලක්.">Commemoration of Sangamitta Theri’s arrival with chanting and almsgiving.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="py-20 bg-cream">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center" data-en="Past Events Gallery" data-si="පසුගිය සිදුවීම් ගැලරිය">Past Events Gallery</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
+                <img src="images/event1.jpg" alt="Past Event 1" class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="font-bold" data-en="Vesak 2023" data-si="වෙසක් 2023">Vesak 2023</h3>
+                <p class="text-gray-600" data-en="Lantern lighting ceremony with over 500 attendees." data-si="500කට වැඩි පිරිසක් සහභාගී වූ ලන්තෑරු ආලෝකමත් කිරීමේ උත්සවය.">Lantern lighting ceremony with over 500 attendees.</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
+                <img src="images/event2.jpg" alt="Past Event 2" class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="font-bold" data-en="Poson 2022" data-si="පොසොන් 2022">Poson 2022</h3>
+                <p class="text-gray-600" data-en="Meditation and Dharma talks under the full moon." data-si="පුන් සඳ යටතේ භාවනා සහ ධර්ම දේශන.">Meditation and Dharma talks under the full moon.</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
+                <img src="images/event3.jpg" alt="Past Event 3" class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="font-bold" data-en="Almsgiving 2021" data-si="දන්සල 2021">Almsgiving 2021</h3>
+                <p class="text-gray-600" data-en="Community almsgiving for 200 families." data-si="පවුල් 200කට ප්‍රජා දන්සලක්.">Community almsgiving for 200 families.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Visit Section -->
+<section id="visit" class="py-20 bg-cream">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+            <h2 class="text-3xl font-bold mb-4" data-en="Visit Us" data-si="ඇවිත්">Visit Us</h2>
+            <p class="text-gray-600 mb-4" data-en="Pitawella Road, Boralesgamuwa, Sri Lanka" data-si="පිටවැල්ල මාර්ගය, බොරලේස්ගමුව, ශ්‍රී ලංකාව">
+                Pitawella Road, Boralesgamuwa, Sri Lanka
+            </p>
+            <p class="text-gray-600 mb-4" data-en="Daily: 6:00 AM – 8:00 PM" data-si="දිනමන්: 6:00 පූ.ව. – 8:00 ප.ව.">
+                Daily: 6:00 AM – 8:00 PM
+            </p>
+            <p class="text-gray-600" data-en="Sunday Dharma Talks: 9:00 AM – 11:00 AM" data-si="ඉරිදා ධර්ම කථා: 9:00 පූ.ව. – 11:00 පූ.ව.">
+                Sunday Dharma Talks: 9:00 AM – 11:00 AM
+            </p>
+        </div>
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.844078555915!2d79.87094731436148!3d6.914607995010527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae256db1a6771c5%3A0x2c63e344ab3d790!2sBoralesgamuwa!5e0!3m2!1sen!2slk!4v1683789000000" class="w-full h-64 rounded-lg shadow-lg" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12" data-en="Get in Touch" data-si="අප අමතන්න">Get in Touch</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
+                    <div>
+                        <label class="block mb-1" data-en="Name" data-si="නම">Name</label>
+                        <input type="text" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-maroon" required>
+                    </div>
+                    <div>
+                        <label class="block mb-1" data-en="Email" data-si="ඊමේල්">Email</label>
+                        <input type="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-maroon" required>
+                    </div>
+                    <div>
+                        <label class="block mb-1" data-en="Message" data-si="පණිවිඩය">Message</label>
+                        <textarea name="message" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-maroon" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="bg-maroon text-white px-6 py-3 rounded-lg hover:bg-gold" data-en="Send Message" data-si="යවන්න">Send Message</button>
+                </form>
+            </div>
+            <div class="text-center md:text-right">
+                <h3 class="text-2xl font-bold mb-4" data-en="Support Our Mission" data-si="අපගේ කාර්යයන්ට සහය දෙන්න">Support Our Mission</h3>
+                <p class="text-gray-600 mb-6" data-en="Your donation helps maintain our temple and supports:" data-si="ඔබගේ දායකත්වයෙන් විහාරය නඩත්තු කිරීමට සහ පහත දෑ සඳහා සහය වේ:">
+                    Your donation helps maintain our temple and supports:
+                </p>
+                <ul class="text-left space-y-2 mb-6">
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-maroon mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span data-en="Monk education" data-si="භික්ෂූන් අධ්‍යාපනය">Monk education</span>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-maroon mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span data-en="Community meals" data-si="සමාජ ආහාර විතරණය">Community meals</span>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-maroon mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span data-en="Dharma outreach" data-si="ධර්ම ප්‍රචාරණය">Dharma outreach</span>
+                    </li>
+                </ul>
+                <a href="#donate" class="bg-gold text-maroon px-6 py-3 rounded-lg hover:bg-yellow-400 block" data-en="Donate Now" data-si="දැන්ම දායක වන්න">Donate Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-maroon text-white py-8">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+            <h3 class="text-lg font-bold mb-4" data-en="Quick Links" data-si="ඉක්මන් සබැඳි">Quick Links</h3>
+            <ul class="space-y-2">
+                <li><a href="#" class="hover:text-gold" data-en="Home" data-si="මුල් පිටුව">Home</a></li>
+                <li><a href="#about" class="hover:text-gold" data-en="About Us" data-si="අප ගැන">About Us</a></li>
+                <li><a href="#teachings" class="hover:text-gold" data-en="Teachings" data-si="ආචාර ධර්ම">Teachings</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="text-lg font-bold mb-4" data-en="Contact" data-si="සම්බන්ධ වන්න">Contact</h3>
+            <p data-en="info@sonuththaramahaviharaya.lk" data-si="info@sonuththaramahaviharaya.lk">info@sonuththaramahaviharaya.lk</p>
+            <p data-en="+94 112 888 777" data-si="+94 112 888 777">+94 112 888 777</p>
+        </div>
+        <div>
+            <h3 class="text-lg font-bold mb-4" data-en="Social Media" data-si="සොෂල් මාධ්‍ය">Social Media</h3>
+            <div class="flex space-x-4">
+                <a href="#"><img src="images/facebook-icon.png" class="h-8" alt="Facebook"/></a>
+                <a href="#"><img src="images/instagram-icon.png" class="h-8" alt="Instagram"/></a>
+                <a href="#"><img src="images/youtube-icon.png" class="h-8" alt="YouTube"/></a>
+            </div>
+        </div>
+    </div>
+    <p class="text-center mt-8 text-sm" data-en="© 2025 Siri Sonuththara Maha Viharaya" data-si="© 2025 සිරි සොනුත්ථර මහා විහාරය">© 2025 Siri Sonuththara Maha Viharaya</p>
+</footer>
+
+<!-- JavaScript -->
+<script>
+    // Language Switching
+    function changeLanguage(lang) {
+        const elements = document.querySelectorAll('[data-en], [data-si]');
+        elements.forEach(element => {
+            if (lang === 'si') {
+                element.textContent = element.dataset.si;
+                element.classList.add('sinhala');
+            } else {
+                element.textContent = element.dataset.en;
+                element.classList.remove('sinhala');
+            }
+        });
+        localStorage.setItem('language', lang);
+    }
+
+    // Mobile Menu Toggle
+    const btn = document.querySelector('.mobile-menu-btn');
+    const menu = document.querySelector('.mobile-menu');
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+
+    // Hero Image Rotation with Fade
+    const heroImages = [
+        'images/hero1.jpg',
+        'images/hero2.jpg',
+        'images/hero3.jpg',
+        'images/hero4.jpg'
+    ];
+    let currentImageIndex = 0;
+    const heroSection = document.getElementById('hero');
+
+    function changeHeroImage() {
+        // Fade out
+        heroSection.style.opacity = '0';
+        
+        setTimeout(() => {
+            // Change image while faded out
+            heroSection.style.backgroundImage = `url('${heroImages[currentImageIndex]}')`;
+            currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+            // Fade back in
+            heroSection.style.opacity = '1';
+        }, 1000); // Matches the transition duration
+    }
+
+    // Initialize Language and Hero Image on Load
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedLang = localStorage.getItem('language') || 'en';
+        changeLanguage(savedLang);
+        heroSection.style.backgroundImage = `url('${heroImages[0]}')`; // Initial image
+        setInterval(changeHeroImage, 5000); // Change every 5 seconds
+    });
+</script>
+
+</body>
+</html>
